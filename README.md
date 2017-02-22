@@ -1,4 +1,4 @@
-# metalsmith-metadata-in-filename
+# metalsmith-metadata-in-filename [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 A Metalsmith plugin to extract the date, slug, and title from your filenames
 
 ## Features
@@ -83,3 +83,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+[npm-image]: https://badge.fury.io/js/metalsmith-metadata-in-filename.svg
+[npm-url]: https://npmjs.org/package/metalsmith-metadata-in-filename
+[travis-image]: https://travis-ci.org/yanneves/metalsmith-metadata-in-filename.svg?branch=master
+[travis-url]: https://travis-ci.org/yanneves/metalsmith-metadata-in-filename
+[daviddm-image]: https://david-dm.org/yanneves/metalsmith-metadata-in-filename.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/yanneves/metalsmith-metadata-in-filename
