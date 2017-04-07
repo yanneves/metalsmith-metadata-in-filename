@@ -47,6 +47,14 @@ metalsmith.use(metadataInFilename({
 }))
 ```
 
+You can limit to only handle files matching a glob pattern
+
+```javascript
+metalsmith.use(metadataInFilename({
+  match: '*.md'
+}))
+```
+
 ## CLI Usage
 
 ```json

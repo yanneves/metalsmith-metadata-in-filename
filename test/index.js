@@ -141,4 +141,32 @@ describe(name, () => {
 
   })
 
+  describe('Mixed files', () => {
+    let metalsmith
+
+    beforeEach(() => {
+      metalsmith = Metalsmith('test/fixtures/mixed/')
+    })
+
+    it('should match and limit to files using glob pattern', done => {
+      const filename = '2017-04-01-post.md'
+      const date = new Date(2017, 3, 1)
+
+      metalsmith
+        .use(plugin({ match: '*.md' }))
+        .build((err, files) => {
+          if (err) return done(err)
+
+          expect(files['index.html']).not.to.include.keys(['title', 'date'])
+          expect(files['robots.txt']).not.to.include.keys(['title', 'date'])
+
+          expect(files[filename]).to.include.keys(['title', 'date'])
+          expect(files[filename].title).to.equal('Post')
+          expect(files[filename].date).to.equalDate(date)
+
+          done()
+        })
+    })
+  })
+
 })
